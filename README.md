@@ -1,23 +1,24 @@
-# Text-Embedding-
+# Text-Embedding
 
-Using transformers and torch
-transformers: A library for working with pre-trained transformer models (e.g., BERT, GPT). Simplifies model loading and tokenization.
-torch: A deep learning library for tensor operations and model computations.
-Configuration File
-Purpose: Stores settings, like model names, separately from code for flexibility and ease of updates.
+Overview
+This project uses transformer models to generate text embeddings. Below are key components and their roles.
+
+Libraries
+transformers: Provides pre-trained transformer models and tools for tokenization.
+torch: Handles tensor computations and model operations.
+Configuration
+Config File: Stores model names and settings separately from code. This allows easy updates and flexibility.
 Embeddings
-Definition: Dense vector representations of text that capture semantic meaning. Used for comparing and processing text.
-Reading Model Name from a File
-Reason: Allows easy model switching by updating the config file rather than modifying code.
-File Handling with with open(config_path, 'r') as file:
-Function: Opens and reads the file, ensuring it is properly closed after use.
-Tokenizer
-Role: Converts text into numerical tokens suitable for model input.
+What are Embeddings?: Numerical vectors representing text that capture semantic meaning. Useful for various NLP tasks.
 Model Loading
-model = AutoModel.from_pretrained(model_name): Loads the specified pre-trained model. Using model names allows easy changes without altering code.
-Test Cases
-Valid Input: Ensure correct embedding for standard text.
-Empty Text: Test handling of empty inputs.
-Different Models: Verify function with various models.
-Invalid Model: Check response to incorrect model names.
-Long Text: Test performance with lengthy inputs.
+Why Use Model Names?: Loading models using their names from a config file makes it easy to switch models without changing the code.
+File Handling
+with open(config_path, 'r') as file:: Opens and reads files safely, ensuring they are properly closed.
+Tokenizer
+Purpose: Converts text into tokens (numerical format) that the model can process.
+**Test Cases
+Valid Input: Test with standard text.
+Empty Text: Ensure the function handles empty strings.
+Different Models: Try various models as specified in the config file.
+Invalid Model: Check how the function handles incorrect model names.
+Long Text: Verify performance with long inputs.
