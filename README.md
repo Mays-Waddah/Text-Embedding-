@@ -1,38 +1,38 @@
 # Text-Embedding
 
-Overview
+# Project Overview
 
-This project uses transformer models to generate text embeddings. Below are key components and their roles.
+This project utilizes transformer models to generate text embeddings. Below is a summary of the key components and their roles.
 
-Libraries
+## Libraries
 
+- **`transformers`**: Provides pre-trained transformer models and tokenization tools.
+- **`torch`**: Manages tensor computations and model operations.
 
-transformers: Provides pre-trained transformer models and tools for tokenization.
-torch: Handles tensor computations and model operations.
-Configuration
+## Configuration
 
+- **Config File**: Holds model names and settings separate from the code, allowing easy updates and flexibility.
 
-Config File: Stores model names and settings separately from code. This allows easy updates and flexibility.
-Embeddings
-What are Embeddings?: Numerical vectors representing text that capture semantic meaning. Useful for various NLP tasks.
+## Embeddings
 
-Model Loading
+- **Definition**: Numerical vectors representing text that capture semantic meaning. Used for various NLP tasks.
 
+## Model Loading
 
-Why Use Model Names?: Loading models using their names from a config file makes it easy to switch models without changing the code.
+- **Why Use Model Names?**: Loading models using names from a config file simplifies model switching without modifying the code.
 
+## File Handling
 
-File Handling
-with open(config_path, 'r') as file:: Opens and reads files safely, ensuring they are properly closed.
+- **`with open(config_path, 'r') as file:`**: Safely opens and reads files, ensuring they are properly closed.
 
+## Tokenizer
 
-Tokenizer
-Purpose: Converts text into tokens (numerical format) that the model can process.
+- **Purpose**: Converts text into tokens (numerical format) that the model can process.
 
+## Test cases
 
-**Test Cases
-Valid Input: Test with standard text.
-Empty Text: Ensure the function handles empty strings.
-Different Models: Try various models as specified in the config file.
-Invalid Model: Check how the function handles incorrect model names.
-Long Text: Verify performance with long inputs.
+Valid Input: Ensure correct embeddings for standard text.
+Empty Text: Handle empty strings gracefully.
+Different Models: Verify function with various models specified in the config file.
+Invalid Model: Test response to incorrect model names.
+Long Text: Check performance with lengthy inputs.
